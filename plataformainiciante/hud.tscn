@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://pbpl2rycy57b"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 226.0
+offset_top = 207.0
+offset_right = 974.0
+offset_bottom = 412.0
+text = "START"
+
+[node name="LivesLabel" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 35.0
+offset_right = 285.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 35
+text = "Vidas: 0"
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 340.0
+offset_top = 27.0
+offset_right = 864.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.882353, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 841.0
+offset_top = 26.0
+offset_right = 1064.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.027451, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Pontos: 0"

@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://voh2qyi6085b"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_1onb7"]
+[ext_resource type="PackedScene" uid="uid://786xa1b0wq5g" path="res://platform.tscn" id="1_12tda"]
+[ext_resource type="Texture2D" uid="uid://dohynpfd2qqwf" path="res://PedradoFrade-art.png" id="2_8qond"]
+[ext_resource type="PackedScene" uid="uid://ci4ylu4mlqxo1" path="res://player.tscn" id="2_mssqi"]
+[ext_resource type="PackedScene" uid="uid://pbpl2rycy57b" path="res://hud.tscn" id="3_cakr0"]
+[ext_resource type="Script" path="res://player.gd" id="3_o222r"]
+[ext_resource type="Script" path="res://hud.gd" id="4_5tqru"]
+[ext_resource type="PackedScene" uid="uid://bo0nqm34quymc" path="res://enemy.tscn" id="7_hfx3t"]
+[ext_resource type="PackedScene" uid="uid://cqi7466yi1hna" path="res://collectable.tscn" id="8_f2nj2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1onb7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576.5, 228)
+scale = Vector2(1.02571, 0.752508)
+texture = ExtResource("2_8qond")
+
+[node name="Platform" parent="." instance=ExtResource("1_12tda")]
+position = Vector2(37, 29)
+
+[node name="Player" parent="." instance=ExtResource("2_mssqi")]
+position = Vector2(604, 129)
+script = ExtResource("3_o222r")
+
+[node name="HUD" parent="." instance=ExtResource("3_cakr0")]
+script = ExtResource("4_5tqru")
+
+[node name="Enemy" parent="." instance=ExtResource("7_hfx3t")]
+position = Vector2(871, 296)
+
+[node name="Collectable" parent="." instance=ExtResource("8_f2nj2")]
+position = Vector2(390, 199)
+
+[node name="Collectable2" parent="." instance=ExtResource("8_f2nj2")]
+position = Vector2(32, 293)
+
+[node name="Collectable3" parent="." instance=ExtResource("8_f2nj2")]
+position = Vector2(1124, 326)
