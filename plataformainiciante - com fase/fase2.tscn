@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://crk4m7yqxrrr5"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_1i85x"]
+[ext_resource type="Texture2D" uid="uid://c1ag37ni3met5" path="res://PonteAnita-art.png" id="2_65ljg"]
+[ext_resource type="PackedScene" uid="uid://786xa1b0wq5g" path="res://platform.tscn" id="3_lm0p8"]
+[ext_resource type="PackedScene" uid="uid://ci4ylu4mlqxo1" path="res://player.tscn" id="4_kjwb8"]
+[ext_resource type="Script" path="res://player.gd" id="5_tumr8"]
+[ext_resource type="PackedScene" uid="uid://pbpl2rycy57b" path="res://hud.tscn" id="6_gp317"]
+[ext_resource type="Script" path="res://hud.gd" id="7_q0f50"]
+[ext_resource type="PackedScene" uid="uid://bo0nqm34quymc" path="res://enemy.tscn" id="8_pul4o"]
+[ext_resource type="PackedScene" uid="uid://cqi7466yi1hna" path="res://collectable.tscn" id="9_n2r34"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1i85x")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(529.5, 264.614)
+scale = Vector2(0.880471, 0.865752)
+texture = ExtResource("2_65ljg")
+
+[node name="Platform" parent="." instance=ExtResource("3_lm0p8")]
+position = Vector2(37, 29)
+
+[node name="Player" parent="." instance=ExtResource("4_kjwb8")]
+position = Vector2(604, 129)
+script = ExtResource("5_tumr8")
+
+[node name="HUD" parent="." instance=ExtResource("6_gp317")]
+script = ExtResource("7_q0f50")
+
+[node name="Enemy" parent="." instance=ExtResource("8_pul4o")]
+position = Vector2(871, 296)
+
+[node name="Collectable" parent="." instance=ExtResource("9_n2r34")]
+position = Vector2(390, 199)
+
+[node name="Collectable2" parent="." instance=ExtResource("9_n2r34")]
+position = Vector2(32, 293)
+
+[node name="Collectable3" parent="." instance=ExtResource("9_n2r34")]
+position = Vector2(1124, 326)
